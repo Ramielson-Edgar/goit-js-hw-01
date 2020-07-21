@@ -1,6 +1,6 @@
 'use strict';
 
-const name = 'shieldGenerator';
+const name = 'Генератор защитного поля';
 let price = 1000;
 
 const rsults = `Выбран ${name}, цена за штуку ${price} кредитов`;
