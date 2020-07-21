@@ -1,24 +1,24 @@
-// 'use strict';
+'use strict';
 
-// let total = 0;
+let total = 0;
 
-// while (true) {
-//   let input = prompt('введите число');
+while (true) {
+  let input = prompt('введите число');
 
-//   if (input === null) {
-//     break;
-//   }
+  if (input === null) {
+    break;
+  }
 
-//   input = Number(input);
+  input = Number(input);
 
-//   const notANumber = Number.isNaN(input);
+  const notANumber = Number.isNaN(input);
 
-//   if (notANumber) {
-//     alert('Было введено не число, попробуйте еще раз');
-//     continue;
-//   }
+  if (notANumber) {
+    alert('Было введено не число, попробуйте еще раз');
+    continue;
+  }
 
-//   total += input;
-// }
+  total += input;
+}
 
-// alert(`Общая сумма чисел равна ${total}`);
+alert(`Общая сумма чисел равна ${total}`);
