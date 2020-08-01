@@ -1,40 +1,43 @@
 'use strict';
+let countryChoice = prompt('Выберите страну, для доставки');
+console.log('Полученное сообщения', countryChoice);
 
 let costOfDelivery;
-const country = 'Австралия';
+const country = countryChoice;
 
-let orderDelivery = prompt('Выберите страну, для доставки');
-console.log('Полученное сообщения', orderDelivery);
+countryChoice =
+  countryChoice[0].toUpperCase(0) + countryChoice.slice(1).toLowerCase();
+console.log('Заглавная буква', countryChoice);
 
-orderDelivery =
-  orderDelivery[0].toUpperCase() + orderDelivery.slice(1).toLowerCase();
-console.log('Заглавная буква', orderDelivery);
+if (countryChoice !== null) {
+  switch (countryChoice) {
+    case 'Китай':
+      costOfDelivery = 100;
 
-switch (orderDelivery) {
-  case 'Китай':
-    costOfDelivery = 100;
-    alert('В вашей стране доставка не доступна');
-    break;
+      break;
 
-  case 'Индия':
-    costOfDelivery = 80;
-    alert('В вашей стране доставка не доступна');
-    break;
+    case 'Индия':
+      costOfDelivery = 80;
 
-  case 'Австралия':
-    costOfDelivery = 170;
-    console.log(
-      `Доставка в ${country} будет стоить ${costOfDelivery} кредитов`,
-    );
-    break;
+      break;
 
-  case 'Чили':
-    costOfDelivery = 250;
-    console.log('Недостаточно средств!');
-    break;
+    case 'Австралия':
+      costOfDelivery = 170;
 
-  case 'Ямайка':
-    costOfDelivery = 120;
-    break;
+      break;
+
+    case 'Чили':
+      costOfDelivery = 250;
+
+      break;
+
+    case 'Ямайка':
+      costOfDelivery = 120;
+
+      break;
+
+    default:
+      alert('В вашей стране доставка не доступна');
+  }
 }
-console.log('Цена за доставку', costOfDelivery);
+console.log(`Доставка в ${country} будет стоить ${costOfDelivery} кредитов`);
